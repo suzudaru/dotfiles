@@ -1,0 +1,76 @@
+
+{
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+
+    //スペースをリーダーに設定
+    "vim.leader": "<space>",
+
+    //ノーマルモードでのキーバインド
+    "vim.otherModesKeyBindings": [
+        //space + w : 保存
+        {
+            "before": ["leader","w"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+
+        //space + q : アクティブなエディタを閉じる
+        {
+            "before": ["leader","q"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        },
+
+        //space + h : 行頭に移動
+        {
+            "before": ["leader","h"],
+            "after": ["^"]
+        },
+
+        //space + l : 行末に移動
+        {
+            "before": ["leader","l"],
+            "after": ["$"]
+        },
+
+        //space + l : 行末に移動
+        {
+            "before": ["leader","l"],
+            "after": ["$"]
+        },
+
+        //コマンドモード移行用のコロンセミコロン入れ替え
+        {
+            "before": [";"],
+            "after": [":"]
+        },
+        {
+            "before": [":"],
+            "after": [";"]
+        },
+
+        //Y, D, Cに一貫性を持たせる
+        {
+            "before": ["Y"],
+            "after": ["y", "$"]
+        },
+
+    ],
+    "workbench.colorTheme": "Monokai Dimmed"
+
+}
